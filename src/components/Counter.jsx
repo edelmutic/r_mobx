@@ -1,12 +1,11 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
 
 const Counter = () => {
     return (
-        <div className='counter'>
-            <div className="btns">
-                <button className='btn'>+</button>
-                <button className='btn'>-</button>
-            </div>
+        <div style={{ margin: '20px' }}>
+            <Button variant="success" >Plus</Button>{' '}
+            <Button variant="danger">Minus</Button>{' '}
         </div>
     )
 }
