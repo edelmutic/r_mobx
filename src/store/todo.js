@@ -76,6 +76,12 @@ class Todo {
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     );
   }
+
+  fetchTodo() {
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
+      .then((response) => response.json())
+      .then((json) => (this.todos = [...this.todos, ...json]));
+  }
 }
 
 export default new Todo();
