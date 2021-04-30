@@ -78,7 +78,7 @@ class Todo {
   }
 
   fetchTodo() {
-    fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then((response) => response.json())
       .then((json) => (this.todos = [...this.todos, ...json]));
   }

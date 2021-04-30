@@ -10,6 +10,7 @@ import todo from '../store/todo'
 const Todo = observer(() => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Button variant="dark" style={{ marginBottom: '30px' }} onClick={() => todo.fetchTodo()}>Server query</Button>
             {todo.todos.map(item =>
                 <div key={item.id}>
                     <InputGroup.Append>
