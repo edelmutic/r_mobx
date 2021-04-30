@@ -1,9 +1,11 @@
+import { observer } from 'mobx-react-lite';
 import React from 'react'
 import { Button } from 'react-bootstrap';
 import counter from '../store/counter';
 
 
-const Counter = () => {
+
+const Counter = observer(() => {
     return (
         <div style={{ margin: '20px', textAlign: "center" }}>
             <div style={{ fontSize: '1.5rem' }}> {"Count =" + counter.count}</div>
@@ -11,6 +13,6 @@ const Counter = () => {
             <Button variant="danger" onClick={() => counter.decrement()}>Minus</Button>{' '}
         </div>
     )
-}
+})
 
 export default Counter
