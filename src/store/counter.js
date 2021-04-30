@@ -2,6 +2,7 @@ import { makeAutoObservable } from 'mobx';
 
 class Counter {
   count = 10;
+  timer = 60;
   constructor() {
     makeAutoObservable(this);
   }
